@@ -5,7 +5,9 @@ import { Box } from "@mui/system";
 const ContactForm = () => {
   return (
     <Box style={{ display: "flex", flexDirection: "column", width: "100%" }}>
-      <Typography variant="h5">Add Contact</Typography>
+      <Typography variant="h5" style={{ fontWeight: "550" }}>
+        Add Contact
+      </Typography>
       <TextField label="userName" style={{ marginTop: "10px" }} />
       <TextField label="Email" style={{ marginTop: "10px" }} />
       <Button variant="contained" style={{ marginTop: "20px" }}>

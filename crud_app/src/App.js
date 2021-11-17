@@ -9,7 +9,7 @@ import "./App.css";
 import { Box } from "@mui/system";
 
 function App() {
-  const contact = [
+  const contacts = [
     { id: 1, username: "taher boudiaf", email: "taher@gmail.com" },
     { id: 2, username: "sami nadir", email: "sami@gmail.com" },
   ];
@@ -23,7 +23,7 @@ function App() {
           </Box>
           <Divider />
           <Box style={{ marginTop: "30px" }}>
-            <ContactList contact={contact} />
+            <ContactList contacts={contacts} />
           </Box>
         </Paper>
       </Container>
