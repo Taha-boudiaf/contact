@@ -17,7 +17,9 @@ const CardContact = ({ contact }) => {
           alignItems: "center",
         }}
       >
-        <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
+        <CardContent>
+          <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
+        </CardContent>
         <div
           style={{
             display: "flex",
