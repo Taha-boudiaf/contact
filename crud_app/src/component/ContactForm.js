@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-
+import { v4 as uuidv4 } from "uuid";
 const ContactForm = ({ handleState }) => {
   // state to save information
   const [userName, setUserName] = useState("");
@@ -9,7 +9,7 @@ const ContactForm = ({ handleState }) => {
   // function to send data from child to parent
   const handleClick = (e) => {
     e.preventDefault();
-    handleState({ id: 3, userName: userName, email: email });
+    handleState({ id: uuidv4(), userName: userName, email: email });
     setUserName("");
     setEmail("");
   };
