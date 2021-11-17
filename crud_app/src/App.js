@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./component/layout/Navbar";
 import { Container, Divider, Paper } from "@mui/material";
 
@@ -9,17 +9,21 @@ import "./App.css";
 import { Box } from "@mui/system";
 
 function App() {
-  const contacts = [
-    { id: 1, username: "taher boudiaf", email: "taher@gmail.com" },
-    { id: 2, username: "sami nadir", email: "sami@gmail.com" },
-  ];
+  const [contacts, setContact] = useState([
+    { id: 1, userName: "taher boudiaf", email: "taher@gmail.com" },
+    { id: 2, userName: "sami nadir", email: "sami@gmail.com" },
+  ]);
+  const handleState = (state) => {
+    setContact([...contacts, state]);
+  };
+
   return (
     <div className="App">
       <Navbar />
       <Container>
         <Paper elevation={3} style={{ padding: "50px", margin: "50px" }}>
           <Box>
-            <ContactForm />
+            <ContactForm handleState={handleState} />
           </Box>
           <Divider />
           <Box style={{ marginTop: "30px" }}>

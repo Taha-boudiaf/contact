@@ -5,7 +5,8 @@ import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutl
 import { deepPurple } from "@mui/material/colors";
 
 const CardContact = ({ contact }) => {
-  const { username, email } = contact;
+  const { userName, email } = contact;
+
   return (
     <>
       <Card
@@ -14,24 +15,32 @@ const CardContact = ({ contact }) => {
           background: "#DDD6FE",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
         }}
       >
         <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
-        <CardContent>
-          <Typography variant="h5" component="div">
-            {username}
-          </Typography>
-          <Typography component="div">{email}</Typography>
-        </CardContent>
-        <CardContent>
-          <Button>
-            <ModeEditOutlineOutlinedIcon />
-          </Button>
-          <Button>
-            <DeleteOutlinedIcon color="error" />
-          </Button>
-        </CardContent>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <CardContent>
+            <Typography variant="h5" component="div">
+              {userName}
+            </Typography>
+            <Typography component="div">{email}</Typography>
+          </CardContent>
+          <CardContent>
+            <Button>
+              <ModeEditOutlineOutlinedIcon />
+            </Button>
+            <Button>
+              <DeleteOutlinedIcon color="error" />
+            </Button>
+          </CardContent>
+        </div>
       </Card>
     </>
   );
