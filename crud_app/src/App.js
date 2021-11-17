@@ -9,10 +9,12 @@ import "./App.css";
 import { Box } from "@mui/system";
 
 function App() {
+  // data
   const [contacts, setContact] = useState([
     { id: 1, userName: "taher boudiaf", email: "taher@gmail.com" },
     { id: 2, userName: "sami nadir", email: "sami@gmail.com" },
   ]);
+  // functionm to receive data from child
   const handleState = (state) => {
     setContact([...contacts, state]);
   };

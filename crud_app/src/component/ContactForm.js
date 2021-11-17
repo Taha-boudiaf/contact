@@ -3,17 +3,17 @@ import { Button, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 const ContactForm = ({ handleState }) => {
+  // state to save information
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
-
+  // function to send data from child to parent
   const handleClick = (e) => {
     e.preventDefault();
     handleState({ id: 3, userName: userName, email: email });
     setUserName("");
     setEmail("");
   };
-  console.log(userName);
-  console.log(email);
+
   return (
     <Box style={{ display: "flex", flexDirection: "column", width: "100%" }}>
       <Typography variant="h5" style={{ fontWeight: "550" }}>
