@@ -14,11 +14,17 @@ function App() {
     { id: 1, userName: "taher boudiaf", email: "taher@gmail.com" },
     { id: 2, userName: "sami nadir", email: "sami@gmail.com" },
   ]);
-  // functionm to receive data from child
+  // function to receive data from child
   const handleState = (state) => {
     setContact([...contacts, state]);
   };
-
+  // function to delete contact
+  const removeContact = (id) => {
+    const NewContact = contacts.filter((contact) => {
+      return contact.id !== id;
+    });
+    setContact(NewContact);
+  };
   return (
     <div className="App">
       <Navbar />
@@ -29,7 +35,7 @@ function App() {
           </Box>
           <Divider />
           <Box style={{ marginTop: "30px" }}>
-            <ContactList contacts={contacts} />
+            <ContactList contacts={contacts} removeContact={removeContact} />
           </Box>
         </Paper>
       </Container>

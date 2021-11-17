@@ -4,8 +4,8 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import { deepPurple } from "@mui/material/colors";
 
-const CardContact = ({ contact }) => {
-  const { userName, email } = contact;
+const CardContact = ({ contact, deleteContact }) => {
+  const { id, userName, email } = contact;
 
   return (
     <>
@@ -38,7 +38,7 @@ const CardContact = ({ contact }) => {
             <Button>
               <ModeEditOutlineOutlinedIcon />
             </Button>
-            <Button>
+            <Button onClick={() => deleteContact(id)}>
               <DeleteOutlinedIcon color="error" />
             </Button>
           </CardContent>

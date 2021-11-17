@@ -3,7 +3,10 @@ import { Box } from "@mui/system";
 import CardContact from "./CardContact";
 import { Typography } from "@mui/material";
 
-const ContactList = ({ contacts }) => {
+const ContactList = ({ contacts, removeContact }) => {
+  const deleteContact = (id) => {
+    removeContact(id);
+  };
   return (
     <div>
       <Box style={{ display: "flex", flexDirection: "column", width: "100%" }}>
@@ -11,7 +14,13 @@ const ContactList = ({ contacts }) => {
           List Contact
         </Typography>
         {contacts.map((contact) => {
-          return <CardContact contact={contact} key={contact.id} />;
+          return (
+            <CardContact
+              contact={contact}
+              key={contact.id}
+              deleteContact={deleteContact}
+            />
+          );
         })}
       </Box>
     </div>
