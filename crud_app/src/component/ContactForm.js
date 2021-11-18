@@ -8,6 +8,10 @@ const ContactForm = ({ handleState }) => {
   const [email, setEmail] = useState("");
   // function to send data from child to parent
   const handleClick = (e) => {
+    if (email === "" || userName === "") {
+      alert("email or userName field is empty");
+      return;
+    }
     e.preventDefault();
     handleState({ id: uuidv4(), userName: userName, email: email });
     setUserName("");
