@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import Navbar from "./component/layout/Navbar";
 import { Container, Divider, Paper } from "@mui/material";
+import { Box } from "@mui/system";
 
 import ContactList from "./component/ContactList";
 import ContactForm from "./component/ContactForm";
-
-import "./App.css";
-import { Box } from "@mui/system";
+import Navbar from "./component/layout/Navbar";
 
 function App() {
   // data
@@ -26,7 +24,7 @@ function App() {
     setContact(NewContact);
   };
   return (
-    <div className="App">
+    <div>
       <Navbar />
       <Container>
         <Paper elevation={3} style={{ padding: "50px", margin: "50px" }}>

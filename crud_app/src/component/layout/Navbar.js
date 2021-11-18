@@ -26,7 +26,7 @@ ElevationScroll.propTypes = {
 
 export default function ElevateAppBar(props) {
   return (
-    <React.Fragment>
+    <>
       <CssBaseline />
       <ElevationScroll {...props}>
         <AppBar>
@@ -38,6 +38,6 @@ export default function ElevateAppBar(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar />
-    </React.Fragment>
+    </>
   );
 }
