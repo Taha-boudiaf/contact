@@ -1,34 +1,3 @@
 {
-  "contact": [
-    {
-      "id": 1,
-      "email": "taherboudiaf@gmail.com",
-      "userName": "taher boudiaf"
-    },
-    {
-      "id": 2,
-      "email": "david@gmail.com",
-      "userName": "david mask"
-    },
-    {
-      "id": "8c09ebd1-9c23-469d-b512-b524b89626a8",
-      "userName": "asdasd",
-      "email": "asdasd"
-    },
-    {
-      "id": "93a124ec-985a-417a-9d59-78262a8f59fb",
-      "userName": "asdfasdfasdf",
-      "email": "asdfasdfasdf"
-    },
-    {
-      "id": "5618c978-d315-4a21-8af4-a4c426b491af",
-      "userName": "asdfasdf",
-      "email": "asdfasdf"
-    },
-    {
-      "id": "1e5b8eea-83cd-41ab-b999-1c2e8cb5c043",
-      "userName": "afsdfasdf",
-      "email": "asdfasdfadsf"
-    }
-  ]
+  "contact": []
 }

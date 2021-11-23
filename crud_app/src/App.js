@@ -18,7 +18,8 @@ function App() {
     setContact([...contacts, res.data]);
   };
   // function to delete contact
-  const removeContact = (id) => {
+  const removeContact = async (id) => {
+    await api.delete(`/contact/${id}`);
     const NewContact = contacts.filter((contact) => {
       return contact.id !== id;
     });
