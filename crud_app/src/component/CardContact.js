@@ -18,7 +18,7 @@ const CardContact = ({ contact, deleteContact }) => {
         }}
       >
         <CardContent>
-          <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
+          <Avatar sx={{ bgcolor: deepPurple[400] }}></Avatar>
         </CardContent>
         <div
           style={{
