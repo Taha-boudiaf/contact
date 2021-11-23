@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Divider, Paper } from "@mui/material";
 import { Box } from "@mui/system";
-
+import api from "./api/Contacts";
 import ContactList from "./component/ContactList";
 import ContactForm from "./component/ContactForm";
 import Navbar from "./component/layout/Navbar";
 
 function App() {
   // data
-  const [contacts, setContact] = useState([
-    { id: 1, userName: "taher boudiaf", email: "taher@gmail.com" },
-    { id: 2, userName: "sami nadir", email: "sami@gmail.com" },
-  ]);
+  const [contacts, setContact] = useState([]);
   // function to receive data from child
   const handleState = (state) => {
     setContact([...contacts, state]);
@@ -23,6 +20,19 @@ function App() {
     });
     setContact(NewContact);
   };
+  //retrieve the contact
+  const retrieveContact = async () => {
+    const res = await api.get("./contact");
+    return res.data;
+  };
+  // async data
+  useEffect(() => {
+    const getAllContact = async () => {
+      const allContact = await retrieveContact();
+      if (allContact) setContact(allContact);
+    };
+    getAllContact();
+  }, []);
   return (
     <div>
       <Navbar />
