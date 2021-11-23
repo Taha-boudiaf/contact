@@ -10,8 +10,12 @@ function App() {
   // data
   const [contacts, setContact] = useState([]);
   // function to receive data from child
-  const handleState = (state) => {
-    setContact([...contacts, state]);
+  const handleState = async (state) => {
+    const request = {
+      ...state,
+    };
+    const res = await api.post("/contact", request);
+    setContact([...contacts, res.data]);
   };
   // function to delete contact
   const removeContact = (id) => {
