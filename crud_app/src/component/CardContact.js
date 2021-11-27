@@ -5,7 +5,7 @@ import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutl
 import { deepPurple } from "@mui/material/colors";
 
 const CardContact = ({ contact, deleteContact }) => {
-  const { id, userName, email } = contact;
+  const { id, userName, email, phone } = contact;
 
   return (
     <>
@@ -33,6 +33,7 @@ const CardContact = ({ contact, deleteContact }) => {
               {userName}
             </Typography>
             <Typography component="div">{email}</Typography>
+            <Typography component="div">{phone}</Typography>
           </CardContent>
           <CardContent>
             <Button>
