@@ -1,26 +1,10 @@
 {
   "contact": [
     {
-      "id": "8a149e36-a754-40c4-849d-042b133c7dae",
-      "userName": "Taher Boudiaf",
-      "email": "taher@gmail.com"
-    },
-    {
-      "id": "ec8c7e9c-2fe0-48b0-aa2a-b69229bca971",
-      "userName": "mohamed",
-      "email": "moh@gmail.com"
-    },
-    {
-      "id": "1a606844-d8fe-4567-a2b1-0bf9bb74dbb4",
-      "userName": "hello",
-      "email": "hello@gmail.com",
-      "phone": "0669933778"
-    },
-    {
-      "id": "bae2063e-b855-44bb-98e8-1589cec1a6d4",
+      "id": "f993d657-12b8-417c-aad1-8e08de332c17",
       "userName": "test",
       "email": "test@gmail.com",
-      "phone": "0645987894"
+      "phone": "01234567890"
     }
   ]
 }

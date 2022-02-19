@@ -29,12 +29,10 @@ export default function ElevateAppBar(props) {
     <>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar>
-          <Toolbar>
-            <Typography variant="h6" component="div">
-              CRUD system test
+        <AppBar style={{paddingTop:'20px',paddingBottom:'20px'}}>
+          <Typography variant="h6" component="div" style={{textAlign:'center'}} >
+              Contact keeper
             </Typography>
-          </Toolbar>
         </AppBar>
       </ElevationScroll>
       <Toolbar />
